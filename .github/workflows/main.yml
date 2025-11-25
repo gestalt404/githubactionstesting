@@ -1,0 +1,12 @@
+name: main
+on: 
+  push: 
+    branches:
+      - 'main'
+  
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "this is main run end to end, integration and unit tests"
+

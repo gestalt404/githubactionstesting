@@ -1,12 +1,12 @@
-name: test
+name: develop
 on: 
   push: 
     branches:
-      - 'test'
+      - 'develop'
   
 jobs:
   hello:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "this unit tests and integration tests"
+      - run: echo "run unit tests"
 
