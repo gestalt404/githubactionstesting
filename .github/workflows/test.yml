@@ -5,6 +5,33 @@ on:
       - 'test'
   workflow_dispatch:
     inputs:
+      rek333-delicious-mac:
+        description: 'A sample choice of the delcious mac or not'
+        type: choice
+        options:
+          - "true"
+          - "false"
+          - "maybe"
+          - "always"
+          - "never"
+          - "sometimes"
+          - "often"
+          - "rarely"
+          - "occasionally"
+          - "frequently"
+          - "seldom"
+          - "regularly"
+          - "sporadically"
+          - "periodically"
+          - "intermittently"
+          - "constantly"
+          - "infrequently"
+          - "routinely"
+          - "habitually"
+          - "systematically"
+          - "randomly"
+        required: false
+        default: true
       prompt:
         description: 'Prompt for integration tests'
         required: true
