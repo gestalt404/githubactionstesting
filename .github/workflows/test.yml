@@ -8,4 +8,10 @@ jobs:
   hello:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "goodbye"
+      
+      - name: hello
+        if: ${{ github.ref == 'develop' }}
+        run: |
+          echo "goodbye"
+          echo "line 2"
+      
