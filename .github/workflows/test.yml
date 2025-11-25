@@ -3,6 +3,12 @@ on:
   push: 
     branches:
       - 'test'
+  workflow_dispatch:
+    inputs:
+      prompt:
+        description: 'Prompt for integration tests'
+        required: true
+        default: 'rke333 smell sock prompt'
   
 jobs:
   linter:
@@ -25,4 +31,4 @@ jobs:
     needs: build
     uses: ./.github/workflows/integration_test.yml
     with:
-      prompt: "RKE333's prompt for integration tests"
+      prompt: ${{ inputs.prompt }}
