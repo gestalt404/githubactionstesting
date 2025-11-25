@@ -15,9 +15,12 @@ jobs:
     steps:
       - run: echo "run unit tests"
 
-  build_and_integration_tests:
+  build:
     needs: [unit_tests, linter] 
     runs-on: ubuntu-latest
     steps:
       - run: echo "build"
-      - run: echo "run integration tests"
+
+  integration_tests:
+    needs: build
+    uses: ./.github/workflows/integration_test.yml
