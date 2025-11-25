@@ -24,3 +24,5 @@ jobs:
   integration_tests:
     needs: build
     uses: ./.github/workflows/integration_test.yml
+    with:
+      prompt: "RKE333's prompt for integration tests"
