@@ -10,7 +10,7 @@ jobs:
     steps:
       
       - name: hello
-        if: ${{ github.ref == 'develop' }}
+        if: ${{ github.ref_name == 'develop' }}
         run: |
           echo "goodbye"
           echo "line 2"
